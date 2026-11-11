@@ -208,7 +208,7 @@
       results.style.display = "none";
 
       try {
-        const response = await fetch(`/api/rankings?range=${encodeURIComponent(range)}&kid=${encodeURIComponent(kid)}`);
+        const response = await fetch(`https://ks-transfer-ranking.vercel.app/api/rankings?range=${encodeURIComponent(range)}&kid=${encodeURIComponent(kid)}`);
         const data = await response.json();
 
         if (data.error) {
