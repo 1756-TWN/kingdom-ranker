@@ -177,7 +177,7 @@
     <div id="targetResult"></div>
 
     <div class="card">
-      <h2 id="rangeTitle">Top 10 Kingdoms</h2>
+      <h2 id="rangeTitle">Leading Kingdoms</h2>
       <table>
         <thead>
           <tr>
@@ -186,7 +186,7 @@
             <th>Transfer Score (Unofficial)</th>
           </tr>
         </thead>
-        <tbody id="top10Body"></tbody>
+        <tbody id="leadingKingdoms"></tbody>
       </table>
     </div>
   </div>
@@ -199,10 +199,10 @@
       const loading = document.getElementById("loading");
       const results = document.getElementById("results");
       const targetResult = document.getElementById("targetResult");
-      const top10Body = document.getElementById("top10Body");
+      const leadingKingdoms = document.getElementById("leadingKingdoms");
       const rangeTitle = document.getElementById("rangeTitle");
 
-      rangeTitle.textContent = `Top 10 Kingdoms in ${range}`;
+      rangeTitle.textContent = `Leading Kingdoms in ${range}`;
 
       loading.style.display = "block";
       results.style.display = "none";
@@ -236,7 +236,7 @@
           targetResult.innerHTML = "";
         }
 
-        top10Body.innerHTML = data.leading.map(item => `
+        leadingKingdoms.innerHTML = data.leading.map(item => `
           <tr>
             <td><strong>#${item.rank}</strong></td>
             <td>${item.kid}</td>
