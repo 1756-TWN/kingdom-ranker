@@ -47,7 +47,7 @@
           <tr>
             <th>Rank</th>
             <th>Kingdom ID (kid)</th>
-            <th>Score</th>
+            <th>Transfer Score</th>
           </tr>
         </thead>
         <tbody id="top10Body"></tbody>
@@ -92,7 +92,7 @@
 							<div class="card target-box">
 								<h3>🔍 Search Result for Kingdom ${tk.kid}</h3>
 								<p><strong>Rank:</strong> #${tk.rank} / ${tk.total}</p>
-								<p><strong>Score:</strong> ${tk.score}</p>
+								<p><strong>Transfer Score:</strong> ${tk.score}</p>
 							</div>`;
 					} else {
 						targetResult.innerHTML = `
@@ -105,7 +105,7 @@
 					targetResult.innerHTML = "";
 				}
 
-				top10Body.innerHTML = data.top10.map(item => `
+				top10Body.innerHTML = data.leading.map(item => `
 					<tr>
 						<td><strong>#${item.rank}</strong></td>
 						<td>${item.kid}</td>
